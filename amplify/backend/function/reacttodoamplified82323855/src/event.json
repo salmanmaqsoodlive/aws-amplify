@@ -1,0 +1,49 @@
+{
+  "Records": [
+    {
+      "eventID": "905e511b3aff34dde659686a33095189",
+      "eventName": "INSERT",
+      "eventVersion": "1.1",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "us-east-1",
+      "dynamodb": {
+        "ApproximateCreationDateTime": 1658493516,
+        "Keys": {
+          "id": {
+            "S": "a0fc7312-cc0a-4a2e-acb1-963f6e7ca2d8"
+          }
+        },
+        "NewImage": {
+          "owner": {
+            "S": "59659162-5a12-440d-88eb-c46dee87b580::salman"
+          },
+          "createdAt": {
+            "S": "2022-07-22T12:38:36.134Z"
+          },
+          "image": {
+            "S": ""
+          },
+          "__typename": {
+            "S": "Todo"
+          },
+          "name": {
+            "S": "triggered"
+          },
+          "description": {
+            "S": "triggered"
+          },
+          "id": {
+            "S": "a0fc7312-cc0a-4a2e-acb1-963f6e7ca2d8"
+          },
+          "updatedAt": {
+            "S": "2022-07-22T12:38:36.134Z"
+          }
+        },
+        "SequenceNumber": "14358600000000013691334069",
+        "SizeBytes": 243,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+      },
+      "eventSourceARN": "arn:aws:dynamodb:us-east-1:072748911387:table/Todo-uovydidfurasfjmj4ol4gbxvry-dev/stream/2022-07-19T12:05:10.619"
+    }
+  ]
+}

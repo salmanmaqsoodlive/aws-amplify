@@ -1,0 +1,13 @@
+{
+  "resourceName": "amplifytodostorage",
+  "policyUUID": "edd34b18",
+  "bucketName": "reacttodoamplified52f903de62e84439b82629ece52f3",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "groupAccess": {}
+}
