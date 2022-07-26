@@ -12,8 +12,8 @@ type Todo @model @auth(rules: [{ allow: owner }]) {
   image: String
 }
 
-type TodoCount @model @auth(rules: [{ allow: owner }]) {
-  # id: ID!
+type TodoCount @model @auth(rules: [{ allow: owner, ownerField: "userId" }]) {
+  id: ID!
   userId: String!
   totalCount: Int!
 }

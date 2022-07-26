@@ -55,12 +55,11 @@ export const createTodoCount = /* GraphQL */ `
     $condition: ModelTodoCountConditionInput
   ) {
     createTodoCount(input: $input, condition: $condition) {
+      id
       userId
       totalCount
-      id
       createdAt
       updatedAt
-      owner
     }
   }
 `;
@@ -70,12 +69,11 @@ export const updateTodoCount = /* GraphQL */ `
     $condition: ModelTodoCountConditionInput
   ) {
     updateTodoCount(input: $input, condition: $condition) {
+      id
       userId
       totalCount
-      id
       createdAt
       updatedAt
-      owner
     }
   }
 `;
@@ -85,12 +83,11 @@ export const deleteTodoCount = /* GraphQL */ `
     $condition: ModelTodoCountConditionInput
   ) {
     deleteTodoCount(input: $input, condition: $condition) {
+      id
       userId
       totalCount
-      id
       createdAt
       updatedAt
-      owner
     }
   }
 `;

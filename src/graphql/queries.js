@@ -37,12 +37,11 @@ export const listTodos = /* GraphQL */ `
 export const getTodoCount = /* GraphQL */ `
   query GetTodoCount($id: ID!) {
     getTodoCount(id: $id) {
+      id
       userId
       totalCount
-      id
       createdAt
       updatedAt
-      owner
     }
   }
 `;
@@ -54,12 +53,11 @@ export const listTodoCounts = /* GraphQL */ `
   ) {
     listTodoCounts(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
+        id
         userId
         totalCount
-        id
-        createdAt
-        updatedAt
-        owner
+        # createdAt
+        # updatedAt
       }
       nextToken
     }

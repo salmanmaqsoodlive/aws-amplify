@@ -20,7 +20,16 @@
               "userPoolId": "authreacttodoamplified56e67cf7"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "API_KEY",
+              "apiKeyConfig": {
+                "apiKeyExpirationDays": 30,
+                "apiKeyExpirationDate": "2022-08-24T13:10:24.733Z",
+                "description": ""
+              }
+            }
+          ]
         }
       }
     }

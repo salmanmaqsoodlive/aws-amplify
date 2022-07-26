@@ -6,7 +6,7 @@ import Button from "../Ui/Button";
 
 const initialState = { name: "", description: "", image: "" };
 
-const CreateTodo = () => {
+const CreateTodo = (props) => {
   const [formState, setFormState] = useState(initialState);
   const [fileData, setFileData] = useState();
 
@@ -35,6 +35,7 @@ const CreateTodo = () => {
       console.log(todo);
       setFormState(initialState);
       await API.graphql(graphqlOperation(createTodo, { input: todo }));
+      props.fetchTodos();
     } catch (err) {
       console.log("error creating todo:", err);
     }

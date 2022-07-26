@@ -3,6 +3,7 @@ import { API, graphqlOperation } from "aws-amplify";
 import { listTodos } from "../../graphql/queries";
 import { AmplifyS3Image } from "@aws-amplify/ui-react/legacy";
 import CreateTodo from "./CreateTodo";
+import TotalCount from "./TotalCount";
 
 const Todo = () => {
   const [todos, setTodos] = useState([]);
@@ -23,8 +24,9 @@ const Todo = () => {
 
   return (
     <div style={styles.container}>
+      <TotalCount />
       <h2>Todos</h2>
-      <CreateTodo />
+      <CreateTodo fetchTodos={fetchTodos} />
       {todos.map((todo, index) => (
         <div key={todo.id ? todo.id : index} style={styles.todo}>
           <div style={styles.image}>

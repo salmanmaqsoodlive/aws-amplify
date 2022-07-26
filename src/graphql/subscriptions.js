@@ -41,38 +41,35 @@ export const onDeleteTodo = /* GraphQL */ `
   }
 `;
 export const onCreateTodoCount = /* GraphQL */ `
-  subscription OnCreateTodoCount($owner: String) {
-    onCreateTodoCount(owner: $owner) {
+  subscription OnCreateTodoCount($userId: String) {
+    onCreateTodoCount(userId: $userId) {
+      id
       userId
       totalCount
-      id
       createdAt
       updatedAt
-      owner
     }
   }
 `;
 export const onUpdateTodoCount = /* GraphQL */ `
-  subscription OnUpdateTodoCount($owner: String) {
-    onUpdateTodoCount(owner: $owner) {
+  subscription OnUpdateTodoCount($userId: String) {
+    onUpdateTodoCount(userId: $userId) {
+      id
       userId
       totalCount
-      id
       createdAt
       updatedAt
-      owner
     }
   }
 `;
 export const onDeleteTodoCount = /* GraphQL */ `
-  subscription OnDeleteTodoCount($owner: String) {
-    onDeleteTodoCount(owner: $owner) {
+  subscription OnDeleteTodoCount($userId: String) {
+    onDeleteTodoCount(userId: $userId) {
+      id
       userId
       totalCount
-      id
       createdAt
       updatedAt
-      owner
     }
   }
 `;
