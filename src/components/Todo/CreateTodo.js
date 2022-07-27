@@ -31,10 +31,9 @@ const CreateTodo = (props) => {
       if (!formState.name || !formState.description) return;
 
       const todo = { ...formState, image: await uploadFile() };
-
-      console.log(todo);
       setFormState(initialState);
       await API.graphql(graphqlOperation(createTodo, { input: todo }));
+      props.fetchTodoCount();
       props.fetchTodos();
     } catch (err) {
       console.log("error creating todo:", err);
